@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.player--active {
+  @apply bg-zinc-300 bg-opacity-55;
+}
+
+.player--active h2 {
+  @apply font-bold;
+}

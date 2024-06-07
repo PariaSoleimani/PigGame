@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/fav-icon.svg" />
+    <link rel="stylesheet" href="./style/output.css" />
+  </head>
+  <body
+    class="relative flex h-screen items-center justify-center bg-gradient-to-tl from-[#2d2b2e] to-[#f24949] text-zinc-900"
+  >
+    <main
+      class="relative flex h-[600px] w-[1000px] rounded-xl bg-zinc-400 bg-opacity-45 drop-shadow-2xl"
+    >
+      <section
+        class="player--1 flex w-1/2 flex-col items-center gap-3 p-20 transition-all duration-700"
+      >
+        <h2 class="text-4xl font-light tracking-[1px] duration-700" id="name--1">PLAYER 1</h2>
+        <p class="font-ligh mb-auto text-7xl text-[#bf2e34]" id="score--1">0</p>
+        <div class="box-score w-3/5 rounded-xl bg-[#bf2e34] p-5 text-center text-white opacity-70">
+          <p class="mb-3 text-lg">CURRENT</p>
+          <p class="text-4xl" id="current--1">0</p>
+        </div>
+      </section>
+      <section
+        class="player--2 flex w-1/2 flex-col items-center gap-3 p-20 transition-all duration-700"
+      >
+        <h2 class="text-4xl font-light tracking-[1px] duration-700" id="name--2">PLAYER 2</h2>
+        <p class="font-ligh mb-auto text-7xl text-[#bf2e34]" id="score--2">0</p>
+        <div class="box-score w-3/5 rounded-xl bg-[#bf2e34] p-5 text-center text-white opacity-70">
+          <p class="mb-3 text-lg">CURRENT</p>
+          <p class="text-4xl" id="current--2">0</p>
+        </div>
+      </section>
+      <img
+        src="./assets/dice-5.png"
+        alt="dice"
+        class="dice absolute left-1/2 top-44 hidden w-24 -translate-x-1/2 drop-shadow-2xl"
+      />
+      <button
+        class="btn--new absolute left-1/2 top-10 flex -translate-x-1/2 cursor-pointer items-center gap-2 rounded-full bg-white px-4 py-1 text-lg drop-shadow-xl transition-all duration-200 hover:gap-3"
+      >
+        <ion-icon class="text-3xl text-[#bf2e34]" name="refresh-circle"></ion-icon
+        ><span class="mt-1 inline-block">NEW GAME</span>
+      </button>
+      <button
+        class="btn--choose absolute left-1/2 top-24 flex -translate-x-1/2 cursor-pointer items-center gap-2 rounded-full bg-white px-4 py-1 text-lg drop-shadow-xl transition-all duration-200 hover:gap-3"
+      >
+        <ion-icon class="text-3xl text-[#bf2e34]" name="people"></ion-icon
+        ><span class="mt-1 inline-block">CHOOSE PLAYER</span>
+      </button>
+      <button
+        class="btn--roll invisible absolute left-1/2 top-80 flex -translate-x-1/2 cursor-pointer items-center gap-2 rounded-full bg-white px-4 py-1 text-lg drop-shadow-xl transition-all duration-200 hover:gap-3"
+      >
+        <ion-icon class="text-3xl text-[#bf2e34]" name="dice"></ion-icon
+        ><span class="mt-1 inline-block">ROLL DICE</span>
+      </button>
+      <button
+        class="btn--hold invisible absolute left-1/2 top-[400px] flex -translate-x-1/2 cursor-pointer items-center gap-2 rounded-full bg-white px-4 py-1 text-lg drop-shadow-xl transition-all duration-200 hover:gap-3"
+      >
+        <ion-icon class="text-3xl text-[#bf2e34]" name="download"></ion-icon
+        ><span class="mt-1 inline-block">HOLD</span>
+      </button>
+      <form class="absolute left-1/2 top-[500px] w-48 -translate-x-1/2 text-center">
+        <label class="text-xs font-semibold text-zinc-900">CHOOSE THE WINNING SCORE</label>
+        <input
+          class="input-score mt-3 w-20 rounded-full px-4 py-1 font-medium focus:outline-none"
+          type="number"
+          min="20"
+          max="100"
+          value="40"
+        />
+      </form>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
